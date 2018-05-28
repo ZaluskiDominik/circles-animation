@@ -10,7 +10,7 @@ function initCanvas()
 	canvas.width=window.innerWidth;
 	canvas.height=window.innerHeight;
 
-	//resize background image
+	//resize canvas' background image
 	canvas.style.backgroundSize=canvas.width + "px " + canvas.height + "px";
 }
 
@@ -67,11 +67,12 @@ let Circle=function(x, y, radius, vx, vy)
 	this.vx=vx;
 	this.vy=vy;
 
+	//circle's radius and max radius to which circle can grow
 	this.baseRadius=radius;
 	this.radius=radius;
 	this.maxRadius=Math.max(radius * 4, 30);
 	
-	//ranom circle's color
+	//random circle's color
 	this.color=new Rgb(Math.random() * 255, Math.random() * 255, Math.random() * 255);
 	//stage of color animation
 	this.colorStage=0;
@@ -192,5 +193,5 @@ function animatonLoop()
 
 //startup function
 initCanvas();
-createCircles(300);
+createCircles(600);
 animatonLoop();
