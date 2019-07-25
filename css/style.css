@@ -1,0 +1,12 @@
+body
+{
+    margin: 0px;
+    overflow: hidden;
+}
+
+canvas
+{
+    background-image: url("../img/background.png");
+    background-position: center;
+    background-size: cover;
+}
